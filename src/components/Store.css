@@ -1,3 +1,45 @@
-#testStore{
+#storeTitle{
     color: green;
+    text-align: center;
+}
+#storeTitleBox{
+    display: flex;
+    justify-content: center;
+}
+#storeCardContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+#storeCard{
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    text-align: center;
+}
+#shoePic{
+    height: 250px;
+    border-radius: 10px;
+    width: 250px;
+}
+#storeCardTitle{
+    font-weight: bolder;
+    font-size: 20px;
+}
+#storeCardTitleBox{
+    display: flex;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+#storeCardPriceBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#storeCardButton{
+    padding: 2px;
+    height: 30px;
+    border-radius: 5px;
 }

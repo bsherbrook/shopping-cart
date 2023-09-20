@@ -5,15 +5,19 @@ import Cart from './components/Cart';
 import Home from './components/Home';
 import About from './components/About';
 import Store from './components/Store';
-
+import productList from './productList';
+import ProductCard from './components/ProductCard';
 
 function App() {
   const [storeDisplay, setStoreDisplay] = useState(false);
   const [aboutDisplay, setAboutDisplay] = useState(false);
   const [homeDisplay, setHomeDisplay] = useState(true);
-  const [cartDisplay, setCartDisplay] = useState(false); 
+  const [cartDisplay, setCartDisplay] = useState(false);
+  const [cart, setCart] = useState([]);
 
-
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
 
   return (
     <>
@@ -25,7 +29,9 @@ function App() {
         cartDisplay={cartDisplay}
       />
       {cartDisplay && (
-        <Cart />
+        <Cart 
+          cart={cart}
+        />
       )}
       {aboutDisplay &&(
         <About />
@@ -34,7 +40,11 @@ function App() {
         <Home />
       )}
       {storeDisplay &&(
-        <Store />
+        <Store 
+          productList={productList}
+          ProductCard={ProductCard}
+          addToCart={addToCart}
+        />
       )}
     </>
   )
